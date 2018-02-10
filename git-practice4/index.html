@@ -2,6 +2,143 @@
 .header
   img.icon(src="http://www.servtech.com.tw/img/pic-logo.png", alt="")
 .content.content_white
+
+$color_yellow: #ffb336
+// $color_yellow: #F46E21
+// $color_blue: #27232f
+$color_blue: #008ED4
+$color_white: #f3f7f7
+$color_grey: #333333
+// $color_grey: #148F5E
+
+$servtech_green: #148F5E
+$servtech_orange: #F46E21
+$servtech_blue: #008ED4
+
+$font_base_size: 10px
+
+$max_width: 768px
+
+@mixin size($w, $h)
+  width: $w
+  height: $h
+  
+*
+  // border: solid 1px 
+  position: relative
+
+html, body
+  padding: 0px
+  margin: 0px
+  
+.header
+  background-color: $color_yellow
+  height: 300px
+  & .icon
+    // position: absolute
+    width: 400px
+    left: 50%
+    top: 50%
+    transform: translateX(-50%) translateY(-50%)
+  
+.content
+  font-family: 'Source Sans Pro', 微軟正黑體
+  
+  padding: 50px
+  & .max_width
+    margin-left: auto
+    margin-right: auto
+    max-width: $max_width
+  & h1
+    font-size: $font_base_size*4
+  & h2
+    font-size: $font_base_size*3
+  & h3
+    font-size: $font_base_size*2
+    
+  & h1.small_english
+    font-size: $font_base_size*2.4        
+  & h2.small_english
+    font-size: $font_base_size*1.6        
+  & h3.small_english
+    font-size: $font_base_size*1.2
+  
+  & .small_english
+    margin-top: -15px
+    
+  & .titlehr
+    border: solid 3px $color_yellow
+    width: 100px
+    
+  & .button
+    padding: 5px 25px
+    display: inline-block
+    border: solid 1px
+    margin-right: 25px
+  & .button_blue
+    background-color: $color_blue
+    color: $color_white
+  & .button_yellow
+    background-color: $color_yellow
+    color: $color_grey
+    font-weight: 600
+    
+  & .color_chip
+    margin-right: 25px
+    display: inline-block
+    & .color_tag,.color_block
+      display: inline-block
+      vertical-align: middle
+    & .color_tag
+      width: 60px
+      font-weight: 600
+    & .color_block
+      border: solid 2px
+      +size(35px, 35px)
+    & .color_block_yellow
+      background-color: $color_yellow
+    & .color_block_blue
+      background-color: $color_blue
+    & .color_block_white
+      background-color: $color_white
+    & .color_block_grey
+      background-color: $color_grey
+      
+.content_grey
+  background-color: $color_grey
+  color: $color_white
+  & h1, & h2, & h3
+    font-weight: 500
+  & .small_english
+    color: $color_yellow
+  & .color_block
+    border-color: $color_white
+  & .button
+    border-color: $color_white
+
+.content_blue
+  background-color: $color_blue
+  color: $color_white
+  & h1, & h2, & h3
+    font-weight: 500
+  & .small_english
+    color: $color_yellow
+  & .color_block
+    border-color: $color_white
+  & .button
+    border-color: $color_white
+    
+.content_white
+  background-color: $color_white
+  color: $color_grey
+  & .small_english
+    color: $color_yellow
+  & .color_block
+    border-color: $color_grey
+  & .button
+    border-color: $color_grey
+    
+      
   .max_width
     h5 Style Guideline
     h1 品牌網頁視覺引導-40px 大標題
